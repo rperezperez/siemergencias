@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Device token:</strong>
+  <%= @io.device_token %>
+</p>
+
+<p>
+  <strong>Dispositivo:</strong>
+  <%= @io.dispositivo %>
+</p>
+
+<%= link_to 'Edit', edit_io_path(@io) %> |
+<%= link_to 'Back', ios_path %>
