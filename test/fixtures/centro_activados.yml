@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  emergencia_id: 
+  centro: MyString
+  prioridad: MyString
+  area: MyString
+  fecha_anadido: 2015-09-22 06:44:04
+
+two:
+  emergencia_id: 
+  centro: MyString
+  prioridad: MyString
+  area: MyString
+  fecha_anadido: 2015-09-22 06:44:04
