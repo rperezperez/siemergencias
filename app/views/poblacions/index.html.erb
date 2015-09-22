@@ -1,35 +1,44 @@
-<h1>Listing poblacions</h1>
-
-<table>
+<%- model_class = Poblacion -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Poblacion %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Centro</th>
-      <th>Nombre</th>
-      <th>Codigo</th>
-      <th>Pl</th>
-      <th>Gc</th>
-      <th>Epes</th>
-      <th colspan="3"></th>
+      <th>ID</th>
+      <th><%= model_class.human_attribute_name(:nombre) %></th>
+      <th><%= model_class.human_attribute_name(:codigo) %></th>
+      <th><%= model_class.human_attribute_name(:pl) %></th>
+      <th><%= model_class.human_attribute_name(:gc) %></th>
+      <th><%= model_class.human_attribute_name(:epes) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @poblacions.each do |poblacion| %>
       <tr>
-        <td><%= poblacion.centro %></td>
+        <td><%= poblacion.id %></td>
         <td><%= poblacion.nombre %></td>
         <td><%= poblacion.codigo %></td>
         <td><%= poblacion.pl %></td>
         <td><%= poblacion.gc %></td>
         <td><%= poblacion.epes %></td>
-        <td><%= link_to 'Show', poblacion %></td>
-        <td><%= link_to 'Edit', edit_poblacion_path(poblacion) %></td>
-        <td><%= link_to 'Destroy', poblacion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=l poblacion.created_at, format: :long %></td>
+        <td>
+          <%= link_to poblacion_path(poblacion), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
+            <%= glyph 'info-sign' %>
+            <%= glyph 'pencil' %>
+          <%- end -%>
+          <%= link_to poblacion_path(poblacion), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
+            <%= glyph 'remove' %>
+          <%- end -%>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Poblacion', new_poblacion_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_poblacion_path,
+            :class => 'btn btn-primary' %>

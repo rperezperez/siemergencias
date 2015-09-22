@@ -1,16 +1,40 @@
-<%= simple_form_for(@poblacion) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.association :centro %>
-    <%= f.input :nombre %>
-    <%= f.input :codigo %>
-    <%= f.input :pl %>
-    <%= f.input :gc %>
-    <%= f.input :epes %>
+<%= form_for @poblacion, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :nombre, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :nombre, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :codigo, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :codigo, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :pl, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :pl, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :gc, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :gc, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :epes, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :epes, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  poblacions_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>

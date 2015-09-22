@@ -1,6 +1,5 @@
-<h1>Editing poblacion</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @poblacion %> |
-<%= link_to 'Back', poblacions_path %>
+<%- model_class = Poblacion -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => Poblacion %></h1>
+</div>
+<%= render :partial => 'form' %>
