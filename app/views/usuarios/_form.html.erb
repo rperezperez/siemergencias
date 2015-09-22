@@ -1,15 +1,34 @@
-<%= simple_form_for(@usuario) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.association :user %>
-    <%= f.input :telefono %>
-    <%= f.input :nombre %>
-    <%= f.input :email %>
-    <%= f.input :codigo %>
+<%= form_for @usuario, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :telefono, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :telefono, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :nombre, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :nombre, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :email, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :email, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :codigo, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :codigo, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  usuarios_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
