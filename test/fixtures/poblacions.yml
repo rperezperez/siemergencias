@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  centro_id: 
+  nombre: MyString
+  codigo: MyString
+  pl: MyString
+  gc: MyString
+  epes: MyString
+
+two:
+  centro_id: 
+  nombre: MyString
+  codigo: MyString
+  pl: MyString
+  gc: MyString
+  epes: MyString
