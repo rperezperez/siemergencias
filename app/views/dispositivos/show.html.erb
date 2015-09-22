@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @dispositivo.usuario %>
+</p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @dispositivo.codigo %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @dispositivo.descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_dispositivo_path(@dispositivo) %> |
+<%= link_to 'Back', dispositivos_path %>
