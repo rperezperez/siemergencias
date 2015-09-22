@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_112: MyString
+  incidente: MyString
+  tipo_incidente: MyString
+  subtipo_incidente: MyString
+  descripcion: MyString
+  comentario: MyText
+  fecha_activacion_aceptada: 2015-09-22 06:44:09
+
+two:
+  id_112: MyString
+  incidente: MyString
+  tipo_incidente: MyString
+  subtipo_incidente: MyString
+  descripcion: MyString
+  comentario: MyText
+  fecha_activacion_aceptada: 2015-09-22 06:44:09
