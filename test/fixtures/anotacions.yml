@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  emergencia_id: 
+  user_id: 
+  mensaje: MyText
+  fecha: 2015-09-22 06:43:58
+
+two:
+  emergencia_id: 
+  user_id: 
+  mensaje: MyText
+  fecha: 2015-09-22 06:43:58
