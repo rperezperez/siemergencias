@@ -1,14 +1,24 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Tetra -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Tetra %></h1>
+</div>
 
-<p>
-  <strong>Issi:</strong>
-  <%= @tetra.issi %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:issi) %></dt>
+      <dd><pre class="prettyprint"><%= @tetra.issi %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Dispositivo:</strong>
-  <%= @tetra.dispositivo %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              tetras_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_tetra_path(@tetra), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              tetra_path(@tetra),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<%= link_to 'Edit', edit_tetra_path(@tetra) %> |
-<%= link_to 'Back', tetras_path %>
