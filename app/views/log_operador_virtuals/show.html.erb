@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Operador virtual:</strong>
+  <%= @log_operador_virtual.operador_virtual %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @log_operador_virtual.tipo %>
+</p>
+
+<p>
+  <strong>Mensaje:</strong>
+  <%= @log_operador_virtual.mensaje %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @log_operador_virtual.fecha %>
+</p>
+
+<%= link_to 'Edit', edit_log_operador_virtual_path(@log_operador_virtual) %> |
+<%= link_to 'Back', log_operador_virtuals_path %>

@@ -1,0 +1,31 @@
+<h1>Listing log_operador_virtuals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operador virtual</th>
+      <th>Tipo</th>
+      <th>Mensaje</th>
+      <th>Fecha</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @log_operador_virtuals.each do |log_operador_virtual| %>
+      <tr>
+        <td><%= log_operador_virtual.operador_virtual %></td>
+        <td><%= log_operador_virtual.tipo %></td>
+        <td><%= log_operador_virtual.mensaje %></td>
+        <td><%= log_operador_virtual.fecha %></td>
+        <td><%= link_to 'Show', log_operador_virtual %></td>
+        <td><%= link_to 'Edit', edit_log_operador_virtual_path(log_operador_virtual) %></td>
+        <td><%= link_to 'Destroy', log_operador_virtual, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Log operador virtual', new_log_operador_virtual_path %>
