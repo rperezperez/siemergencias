@@ -1,6 +1,5 @@
-<h1>Editing centro</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @centro %> |
-<%= link_to 'Back', centros_path %>
+<%- model_class = Centro -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => Centro %></h1>
+</div>
+<%= render :partial => 'form' %>
