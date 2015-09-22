@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :tetras
+
   resources :operador_virtuals
 
   resources :log_operador_virtuals

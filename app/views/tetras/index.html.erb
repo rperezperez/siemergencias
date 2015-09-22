@@ -1,0 +1,27 @@
+<h1>Listing tetras</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Issi</th>
+      <th>Dispositivo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tetras.each do |tetra| %>
+      <tr>
+        <td><%= tetra.issi %></td>
+        <td><%= tetra.dispositivo %></td>
+        <td><%= link_to 'Show', tetra %></td>
+        <td><%= link_to 'Edit', edit_tetra_path(tetra) %></td>
+        <td><%= link_to 'Destroy', tetra, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tetra', new_tetra_path %>
