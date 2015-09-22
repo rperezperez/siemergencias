@@ -1,0 +1,35 @@
+<h1>Listing poblacions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Centro</th>
+      <th>Nombre</th>
+      <th>Codigo</th>
+      <th>Pl</th>
+      <th>Gc</th>
+      <th>Epes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @poblacions.each do |poblacion| %>
+      <tr>
+        <td><%= poblacion.centro %></td>
+        <td><%= poblacion.nombre %></td>
+        <td><%= poblacion.codigo %></td>
+        <td><%= poblacion.pl %></td>
+        <td><%= poblacion.gc %></td>
+        <td><%= poblacion.epes %></td>
+        <td><%= link_to 'Show', poblacion %></td>
+        <td><%= link_to 'Edit', edit_poblacion_path(poblacion) %></td>
+        <td><%= link_to 'Destroy', poblacion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Poblacion', new_poblacion_path %>

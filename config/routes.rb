@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :poblacions
+
   resources :usuarios
 
   resources :centro_usuarios

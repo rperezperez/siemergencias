@@ -1,0 +1,16 @@
+<%= simple_form_for(@poblacion) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :centro %>
+    <%= f.input :nombre %>
+    <%= f.input :codigo %>
+    <%= f.input :pl %>
+    <%= f.input :gc %>
+    <%= f.input :epes %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
