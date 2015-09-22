@@ -1,24 +1,28 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = LogOperadorVirtual -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => LogOperadorVirtual %></h1>
+</div>
 
-<p>
-  <strong>Operador virtual:</strong>
-  <%= @log_operador_virtual.operador_virtual %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:tipo) %></dt>
+      <dd><pre class="prettyprint"><%= @log_operador_virtual.tipo %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:mensaje) %></dt>
+      <dd><pre class="prettyprint"><%= @log_operador_virtual.mensaje %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:fecha) %></dt>
+      <dd><pre class="prettyprint"><%= @log_operador_virtual.fecha %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Tipo:</strong>
-  <%= @log_operador_virtual.tipo %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              log_operador_virtuals_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_log_operador_virtual_path(@log_operador_virtual), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              log_operador_virtual_path(@log_operador_virtual),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Mensaje:</strong>
-  <%= @log_operador_virtual.mensaje %>
-</p>
-
-<p>
-  <strong>Fecha:</strong>
-  <%= @log_operador_virtual.fecha %>
-</p>
-
-<%= link_to 'Edit', edit_log_operador_virtual_path(@log_operador_virtual) %> |
-<%= link_to 'Back', log_operador_virtuals_path %>
