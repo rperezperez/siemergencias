@@ -1,6 +1,5 @@
-<h1>Editing centro_usuario</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @centro_usuario %> |
-<%= link_to 'Back', centro_usuarios_path %>
+<%- model_class = CentroUsuario -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => CentroUsuario %></h1>
+</div>
+<%= render :partial => 'form' %>
