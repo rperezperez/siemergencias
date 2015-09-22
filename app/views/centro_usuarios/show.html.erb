@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @centro_usuario.usuario %>
+</p>
+
+<p>
+  <strong>Centro:</strong>
+  <%= @centro_usuario.centro %>
+</p>
+
+<p>
+  <strong>Rol:</strong>
+  <%= @centro_usuario.rol %>
+</p>
+
+<%= link_to 'Edit', edit_centro_usuario_path(@centro_usuario) %> |
+<%= link_to 'Back', centro_usuarios_path %>

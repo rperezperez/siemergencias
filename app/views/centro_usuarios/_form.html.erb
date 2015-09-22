@@ -1,0 +1,13 @@
+<%= simple_form_for(@centro_usuario) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :usuario %>
+    <%= f.association :centro %>
+    <%= f.input :rol %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

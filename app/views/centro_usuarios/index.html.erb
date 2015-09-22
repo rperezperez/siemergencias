@@ -1,0 +1,29 @@
+<h1>Listing centro_usuarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Usuario</th>
+      <th>Centro</th>
+      <th>Rol</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @centro_usuarios.each do |centro_usuario| %>
+      <tr>
+        <td><%= centro_usuario.usuario %></td>
+        <td><%= centro_usuario.centro %></td>
+        <td><%= centro_usuario.rol %></td>
+        <td><%= link_to 'Show', centro_usuario %></td>
+        <td><%= link_to 'Edit', edit_centro_usuario_path(centro_usuario) %></td>
+        <td><%= link_to 'Destroy', centro_usuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Centro usuario', new_centro_usuario_path %>

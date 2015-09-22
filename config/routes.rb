@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :centro_usuarios
+
   resources :dispositivos
 
   resources :ios
