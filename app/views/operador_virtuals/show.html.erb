@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @operador_virtual.user %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @operador_virtual.descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_operador_virtual_path(@operador_virtual) %> |
+<%= link_to 'Back', operador_virtuals_path %>

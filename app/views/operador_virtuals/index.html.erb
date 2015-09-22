@@ -1,0 +1,27 @@
+<h1>Listing operador_virtuals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Descripcion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @operador_virtuals.each do |operador_virtual| %>
+      <tr>
+        <td><%= operador_virtual.user %></td>
+        <td><%= operador_virtual.descripcion %></td>
+        <td><%= link_to 'Show', operador_virtual %></td>
+        <td><%= link_to 'Edit', edit_operador_virtual_path(operador_virtual) %></td>
+        <td><%= link_to 'Destroy', operador_virtual, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Operador virtual', new_operador_virtual_path %>
