@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  emergencia_id: 
+  dispositivo_id: 
+  lat: MyString
+  long: MyString
+  mensaje: MyString
+
+two:
+  emergencia_id: 
+  dispositivo_id: 
+  lat: MyString
+  long: MyString
+  mensaje: MyString
